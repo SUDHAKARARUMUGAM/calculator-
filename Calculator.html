@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Calc</title>
+</head>
+<style>
+    .calculator{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 10px;
+      border: 2px solid #7a0404b6;
+      border-radius: 8px;
+    }
+    .calculator button {
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      background-color: #da08c180;
+      border: 2px solid #000908db;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .get input{
+        padding: 15px;
+        width: 300px;
+        height: 30px;
+        text-align: right;
+        font-size: xx-large;
+    }
+    button:hover{
+        background-color: rgb(255, 0, 0);
+        -webkit-animation-delay: backrou;
+}
+p:hover{
+    background-color: rgb(5, 63, 0);
+}
+</style>
+<body style="background-color: rgb(94, 171, 218);"><center>
+    <h1>Standard Calculator</h1>
+    <br>
+    <div class="get">
+    <input type="text" readonly id="display">
+</div>
+<br><br>
+    <div class="calculator">
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">MC</p>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">MR</p>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">M+</p>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">M-</p>
+        <button onclick="appendnum(7)">7</button>
+        <button onclick="appendnum(8)">8</button>
+        <button onclick="appendnum(9)">9</button>
+        <button onclick="appendop('+')">+</button>
+        <button onclick="appendnum(4)">4</button>
+        <button onclick="appendnum(5)">5</button>
+        <button onclick="appendnum(6)">6</button>
+        <button onclick="appendop('-')">-</button>
+        <button onclick="appendnum(1)">1</button>
+        <button onclick="appendnum(2)">2</button>
+        <button onclick="appendnum(3)">3</button>
+        <button onclick="appendop('*')">*</button>
+        <button onclick="appendnum(0)">0</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendop('/')">/</button>
+        <button onclick="clean()">Clear</button>
+      </div>
+</center>
+<script src="caljs.js"></script>
+</body>
+</html>
